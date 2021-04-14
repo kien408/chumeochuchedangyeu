@@ -1,0 +1,9 @@
+<?php
+	include("inc/conn.php");
+	$sql="select * from public.login";
+	$q= pg_query($dbconn,$sql);
+	$row=pg_fetch_array($q);
+	$username=$row['username'];
+	
+	echo $username;
+?>
